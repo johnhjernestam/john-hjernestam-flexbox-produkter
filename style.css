@@ -8,25 +8,33 @@
 body {
 	font-family: 'Poppins', sans-serif;
 }
-/*HELA HEADER PARTIET*//*HELA HEADER PARTIET*/
+/*HEADER*//*HEADER*//*HEADER*/
 header {
-	display: flex;
+	display: flex; /*Display flex gör så att allt inom classen hamnar på en rad*/
 	width: 80%;
 	height: 10vh;
 	margin: auto;
 	align-items: center;
-	/*background-color: mediumturquoise;*/
 }
 
 .logo-container,
 .nav-links,
 .cart {
-	display: flex;
+	display: flex; /*Display flex gör så att allt inom classen hamnar på en rad*/
 }
 
 /*LOGGA*//*LOGGA*//*LOGGA*/
 .logo-container {
-	flex: 1;
+	flex: 1; /*Flex 1 gör så att det tar upp en del av 
+			   skärmen. Det finns 4 objekt i headern och
+			   nav:en som är länkarna till home, products och contact
+			   tar har flex 2 och carten har flex 1 (billoggan har 1). Alltså tar loggan 
+			   på bilen upp en fjärdel av header partiet och länkarna tar upp
+			   halva headern och carten tar upp den sista fjärdelen.
+			   Alltså hjälper flex till att jämnfördela avståndet och
+			   få en objekten till flex att vara responsive.
+			   Kommer inte ta upp en sådan här omfattande förklaring för alla flex
+			   för det tar plats och blir upprepande.*/
 }
 
 .billogga{
@@ -40,10 +48,13 @@ header {
 }
 /*NAVBAR*//*NAVBAR*//*NAVBAR*/
 nav {
-	flex: 2;
+	flex: 2; /*Naven är länkarna home, products och contact. 
+			   Eftersom det finns fyra saker i headern tar den upp
+			   hälften av all plats då jag satt carten och loggan som flex 1. 
+			   Bättre förklaringen finns ovan.*/
 }
 .nav-links {
-	justify-content: space-around;
+	justify-content: space-around; /*Gör så att det blir mellanrum eller gör plats runt länkarna home, products och contact*/
 	list-style: none;
 }
 .nav-link1 {
@@ -81,39 +92,39 @@ nav {
 
 /*CART*//*CART*//*CART*/
 .cart {
-	flex: 1;
-	justify-content: flex-end;
+	flex: 1; /*Flex 1 gör så att det tar upp en del av skärmen, i detta fall tar det upp en fjärdedel av headern */
+	justify-content: flex-end; /*Flex-end gör så att objektet åker längst till höger av 
+								 området. Motsatsen är flex-start som gör att objektet
+								 kommer längst till vänster.*/
+
 }
 
-/*Istället för lösa namn kan man sätta namnen i diven med 
-bilbilderna så namnen sitter ihop ovanför bilderna på bilarna*/
+/*RUBRIK*/
 .names{
 	margin-top: 10px;
-	display: flex;
+	display: flex; /*Display flex gör så att allt inom classen hamnar på en rad*/
 	font-weight: 500;
-	justify-content: center;
-	/*background-color: mediumaquamarine;*/
+	justify-content: center; /*Objektet kommer i centrum av skärmen oavsett vilken storlek användaren har på fönstret*/
 }
-
+/*CONTAINER OCH BILDER*/
 .container{
 	margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-    /*background-color: mediumaquamarine;*/
+    display: flex; /*Display flex gör så att allt inom classen hamnar på en rad*/
+    flex-wrap: wrap; /*När inte bilderna får plats så åker dem ett steg nedåt*/
+	justify-content: center; /*Objektet åker in till mitten*/
+	align-items: center; /*Itemsen är på en rad och centrerade*/
 }
 
 .item1{
-    flex: 1;
+    flex: 1; /*Förklarat ovan men fyller ut så bilderna tar så stor plats som möjligt*/
 }
 
 .item2{
-	flex: 1;
+	flex: 1; /*Förklarat ovan*/
 }
 
 .item3{
-	flex: 1;
+	flex: 1; /*Förklarat ovan*/
 }
 
 /*SKUGGA OCH AMINATION FÖR BILD*//*SKUGGA OCH AMINATION FÖR BILD*/
@@ -130,18 +141,16 @@ bilbilderna så namnen sitter ihop ovanför bilderna på bilarna*/
 		transform: translateY(-90px);
 	}
 	100% {
-		opacity: 1;
+		opacity: 1; /*Opacity 1 betyder att man kan se objektet som vanligt*/
 		transform: translateY(0px);
 	}
 }
-/*GLÖM INTE KEYFRAMES OM DU VILL ATT BILDERNA SKA DROPPA NED, ALLTSÅ EN ANIMATION*/
+
 
 /*FOOTER*/
-/*JAG TÄNKER ATT JAG HAR MIN MAIL I MITTEN OCH EN MAIL LOGGA OCH TILL SIST
-LUXCARS OCH COPYRIGHT MÄRKET, EN CIRKEL MED ETT C I*/
 .footer {
-    position: fixed;
-    left: 0;
+    position: fixed; /*Denna webb är mobilanpassad. Utan fixed foot så försvann footern.*/
+    left: 0; 		
     bottom: 0;
 	width: 100%;
 	height: 8vh;
@@ -160,15 +169,6 @@ LUXCARS OCH COPYRIGHT MÄRKET, EN CIRKEL MED ETT C I*/
 	font-weight: 800;
 	font-size: 10px;
 }
-
-
-/*
-.iglogga{
-	
-}
-
-.maillogga{
-
-}
-
-
+/*Home, products, contact och bilden på en kundvagn har alla samma kod.*/
+/*Eftersom man behövde bara göra en sida så lade jag mycket tid på att få*/
+/*sidan mobilanpassad.*/ 
