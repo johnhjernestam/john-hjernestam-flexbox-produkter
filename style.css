@@ -1,0 +1,174 @@
+/*FÖR HELA SIDAN*//*FÖR HELA SIDAN*//*FÖR HELA SIDAN*/
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+/*HELA HEADER PARTIET*//*HELA HEADER PARTIET*/
+header {
+	display: flex;
+	width: 80%;
+	height: 10vh;
+	margin: auto;
+	align-items: center;
+	/*background-color: mediumturquoise;*/
+}
+
+.logo-container,
+.nav-links,
+.cart {
+	display: flex;
+}
+
+/*LOGGA*//*LOGGA*//*LOGGA*/
+.logo-container {
+	flex: 1;
+}
+
+.billogga{
+	margin-top: 5px;
+}
+
+.logo {
+	font-weight: 500;
+	font-size: 20px;
+	margin: 5px;
+}
+/*NAVBAR*//*NAVBAR*//*NAVBAR*/
+nav {
+	flex: 2;
+}
+.nav-links {
+	justify-content: space-around;
+	list-style: none;
+}
+.nav-link1 {
+	color: #46465e;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.nav-link2 {
+	color: #46465e;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.nav-link3 {
+	color: #46465e;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.nav-link1:hover {
+	color: black;
+	letter-spacing: 0.5px;
+}
+
+.nav-link2:hover {
+	color: black;
+	letter-spacing: 0.5px;
+}
+
+.nav-link3:hover {
+	color: black;
+	letter-spacing: 0.5px;
+}
+
+/*CART*//*CART*//*CART*/
+.cart {
+	flex: 1;
+	justify-content: flex-end;
+}
+
+/*Istället för lösa namn kan man sätta namnen i diven med 
+bilbilderna så namnen sitter ihop ovanför bilderna på bilarna*/
+.names{
+	margin-top: 10px;
+	display: flex;
+	font-weight: 500;
+	justify-content: center;
+	/*background-color: mediumaquamarine;*/
+}
+
+.container{
+	margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+    /*background-color: mediumaquamarine;*/
+}
+
+.item1{
+    flex: 1;
+}
+
+.item2{
+	flex: 1;
+}
+
+.item3{
+	flex: 1;
+}
+
+/*SKUGGA OCH AMINATION FÖR BILD*//*SKUGGA OCH AMINATION FÖR BILD*/
+.item1,
+.item2,
+.item3 {
+	filter: drop-shadow(0px 5px 3px black);
+    animation: drop 1.5s ease;
+}
+
+@keyframes drop {
+	0% {
+		opacity: 0; /*Opacity 0 betyder att man inte kan se objektet*/
+		transform: translateY(-90px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+/*GLÖM INTE KEYFRAMES OM DU VILL ATT BILDERNA SKA DROPPA NED, ALLTSÅ EN ANIMATION*/
+
+/*FOOTER*/
+/*JAG TÄNKER ATT JAG HAR MIN MAIL I MITTEN OCH EN MAIL LOGGA OCH TILL SIST
+LUXCARS OCH COPYRIGHT MÄRKET, EN CIRKEL MED ETT C I*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+	width: 100%;
+	height: 8vh;
+    background-color: rgb(238, 237, 237);
+    color: black;
+    text-align: center;
+}
+
+
+.p-foot{
+	font-weight: 500;
+	font-size: 10px;
+}
+
+.p-foot1{
+	font-weight: 800;
+	font-size: 10px;
+}
+
+
+/*
+.iglogga{
+	
+}
+
+.maillogga{
+
+}
+
+
